@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - FitConnet</title>
+  <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+  <div class="registro-container">
+    <h2>Crear cuenta</h2>
+    <form action="#" method="POST">
+      <form action="../registro.php" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+
+        <label for="id_objetivo">Objetivo:</label>
+        <select id="id_objetivo" name="id_objetivo" required>
+          <option value="1">Perder peso</option>
+          <option value="2">Ganar masa muscular</option>
+          <option value="3">Mejorar resistencia</option>
+        </select>
+
+        <button type="submit" class="btn">Registrarse</button>
+      </form>
+    </form>
+    <a href="../login.html" class="btn btn-secondary">Volver al login</a>
+  </div>
+</body>
+</html>
