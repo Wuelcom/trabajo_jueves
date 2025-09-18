@@ -1,0 +1,30 @@
+{
+  "name": "trabajo_jueves",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wuelcom/trabajo_jueves.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Wuelcom/trabajo_jueves/issues"
+  },
+  "homepage": "https://github.com/Wuelcom/trabajo_jueves#readme",
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.8.0",
+    "jest": "^30.1.3",
+    "jest-environment-jsdom": "^30.1.3"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}

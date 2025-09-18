@@ -36,8 +36,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $conn->prepare('INSERT INTO usuarios (nombre, correo_electronico, contrasena, id_objetivo) VALUES (?, ?, ?, ?)');
     $stmt->bind_param('sssi', $nombre, $correo, $contrasena_hash, $id_objetivo);
     if ($stmt->execute()) {
-        // Registro exitoso, redirige a login
-        echo '<script>alert("Registro exitoso. Inicia sesión."); window.location.href = "../login.html";</script>';
+        // Verifica si se insertó al menos una fila
+        if ($stmt->affected_rows > 0) {
+            // Registro exitoso, redirige a index o login
+            echo '<script>alert("Registro exitoso. Inicia sesión."); window.location.href = "index/index.html";</script>';
+        } else {
+            echo '<script>alert("No se pudo insertar el usuario. Verifica los datos."); window.location.href = "registro/registro.html";</script>';
+        }
     } else {
         $errorMsg = addslashes($stmt->error);
         echo "<script>alert('Error al registrar usuario: $errorMsg'); window.location.href = 'registro/registro.html';</script>";

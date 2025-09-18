@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $result->fetch_assoc();
         if (password_verify($contrasena, $user['contrasena'])) {
             // Login exitoso, redirige a index
-            header('Location: index/index.html');
+            header('Location: /trabajo_jueves/index/index.html');
             ob_end_flush();
             exit();
         }
